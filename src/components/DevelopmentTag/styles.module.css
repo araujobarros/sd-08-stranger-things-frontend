@@ -1,0 +1,22 @@
+.developmentTagContainer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.developmentTag {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: tomato;
+  transform: rotateZ(-45deg);
+  position: absolute;
+  left: -78px;
+  top: 40px;
+  width: 300px;
+  font-size: 1.2rem;
+}

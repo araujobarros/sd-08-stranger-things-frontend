@@ -18,6 +18,7 @@ const upsideDownConfig = {
 
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
+const inDev = process.env.DEVELOPMENT === 'true';
 
 class StrangerThings extends React.Component {
   constructor(props) {
@@ -28,7 +29,6 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
-      inDev: (process.env.DEVELOPMENT === 'true'),
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -106,7 +106,7 @@ class StrangerThings extends React.Component {
 
   render() {
     const {
-      hereIsTheUpsideDownWorld, characterName, characters, page, inDev,
+      hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
     return (
       <div

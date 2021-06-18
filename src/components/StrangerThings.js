@@ -2,8 +2,6 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
-require('dotenv').config();
-
 const TIMEOUT = 30000;
 const ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT;
 

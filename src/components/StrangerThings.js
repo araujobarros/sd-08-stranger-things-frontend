@@ -11,6 +11,7 @@ const strangerThingsConfig = {
   timeout: 30000,
 };
 
+
 const upsideDownConfig = {
   url: 'http://localhost:3003',
   timeout: 30000,

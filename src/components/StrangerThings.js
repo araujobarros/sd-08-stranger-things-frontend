@@ -133,7 +133,6 @@ class StrangerThings extends React.Component {
           <div>
             <Table characters={ characters } />
           </div>
-
           <div>
             <p>
               Página atual:

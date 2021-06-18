@@ -18,7 +18,8 @@ const upsideDownConfig = {
 
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
-const inDev = process.env.DEVELOPMENT === 'true';
+const inDev = (process.env.DEVELOPMENT === 'true');
+console.log(inDev);
 
 class StrangerThings extends React.Component {
   constructor(props) {
@@ -122,7 +123,7 @@ class StrangerThings extends React.Component {
             </button>
           </div>
 
-          { inDev && <button type="submit">Em desenvolvimento</button> }
+          { inDev ? <button type="submit">Em desenvolvimento</button> : ''}
 
           <div>
             <input

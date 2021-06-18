@@ -5,6 +5,7 @@ import Table from './Table';
 require('dotenv').config();
 
 const TIMEOUT = 30000;
+const ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT;
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
@@ -118,6 +119,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
+          <h1>{ ENVIRONMENT === 'production' ? '' : 'Em desenvolvimento'}</h1>
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}

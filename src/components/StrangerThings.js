@@ -19,7 +19,7 @@ const upsideDownConfig = {
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 const inDev = (process.env.DEVELOPMENT === 'true');
-console.log(inDev);
+console.log(process.env.DEVELOPMENT);
 
 class StrangerThings extends React.Component {
   constructor(props) {

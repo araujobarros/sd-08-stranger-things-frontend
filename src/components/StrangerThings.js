@@ -139,7 +139,8 @@ class StrangerThings extends React.Component {
             />
             <button type="button" onClick={ this.searchClick }>Pesquisar</button>
           </div>
-
+          { process.env.REACT_APP_DEVELOPMENT === 'true'
+            && <h3>              Em desenvolvimento               </h3>}
           <div>
             <Table characters={ characters } />
           </div>

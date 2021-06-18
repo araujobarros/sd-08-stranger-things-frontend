@@ -4,6 +4,9 @@ import Table from './Table';
 
 require('dotenv').config();
 
+const devMode = process.env.REACT_APP_DEVELOPMENT_ENV === 'true';
+console.log('devMode', typeof devMode);
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -109,13 +112,16 @@ class StrangerThings extends React.Component {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
+
     return (
       <div
         className={ `reality ${getRealityClass(
           hereIsTheUpsideDownWorld,
         )}` }
       >
+
         <div className="content strangerfy">
+          { devMode && <p>Em desenvolvimento</p> }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}

@@ -8,7 +8,7 @@ require('dotenv/config');
 function App() {
   return (
     <div className="App">
-      {process.env.REACT_APP_DEVELOPMENT && <p>Em desenvolvimento</p>}
+      {JSON.parse(process.env.REACT_APP_DEVELOPMENT) && <p>Em desenvolvimento</p>}
       <StrangerThings />
     </div>
   );

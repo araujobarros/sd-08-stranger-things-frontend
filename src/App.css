@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+/* Feito com a ajuda do mestre Paulo Simões */
+.container {
+  background: #c11b1f;
+  left: -60px;
+  padding: 10px;
+  position: fixed;
+  transform: rotate(-45deg);
+  top: 60px;
+  width: 250px;
+}
+
+.container p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

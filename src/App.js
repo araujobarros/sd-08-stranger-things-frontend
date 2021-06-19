@@ -3,8 +3,9 @@ import './App.css';
 
 import StrangerThings from './components/StrangerThings';
 
+const development = process.env.REACT_APP_DEVELOPMENT_TAG === 'true';
+
 function App() {
-  const development = process.env.REACT_APP_DEVELOPMENT_TAG === 'true';
   return (
     <div className="App">
       {

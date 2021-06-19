@@ -21,6 +21,8 @@ const upsideDownConfig = {
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
+const dev = process.env.REACT_APP_DEVELOPMENT === 'true';
+
 class StrangerThings extends React.Component {
   constructor(props) {
     super(props);
@@ -115,6 +117,7 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
+
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
@@ -122,6 +125,8 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
+
+          <h1 style={ { color: 'red' } }>{ dev ? 'Em desenvolvimento' : '' }</h1>
 
           <div>
             <input

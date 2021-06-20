@@ -4,9 +4,6 @@ import Table from './Table';
 
 require('dotenv').config();
 
-const devMode = process.env.REACT_APP_DEVELOPMENT_ENV === 'true';
-console.log('devMode', typeof devMode);
-
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 class Table extends React.Component {
   render() {
     const { characters } = this.props;
+    console.log(characters);
     return (
       <table>
         <thead>
@@ -14,6 +15,7 @@ class Table extends React.Component {
           </tr>
         </thead>
         <tbody>
+          {/* { console.log(characters) } */}
           {characters.map((char) => (
             <tr key={ char.name }>
               <td>{char.name}</td>

@@ -4,13 +4,6 @@ import Table from './Table';
 
 require('dotenv').config();
 
-const {
-  REACT_APP_HAWKINS_URL,
-  REACT_APP_UPSIDEDOWN_URL,
-} = process.env;
-
-// const timeout = 30000;
-
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );

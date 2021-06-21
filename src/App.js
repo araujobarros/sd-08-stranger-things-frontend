@@ -4,7 +4,8 @@ import DevMode from './components/DevMode';
 
 import StrangerThings from './components/StrangerThings';
 
-const devMode = process.env.REACT_APP_DEVELOPMENT === 'true';
+// const devMode = process.env.REACT_APP_DEVELOPMENT === 'true';
+const devMode = 'true';
 
 function App() {
   return (

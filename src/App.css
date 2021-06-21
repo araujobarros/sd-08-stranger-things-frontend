@@ -14,7 +14,7 @@ button, p, th, a, input {
 .development-container {
   background: linear-gradient(90deg, rgba(255,255,255,0.30015756302521013) 0%, rgba(11,11,11,0.896796218487395) 33%, rgba(22,22,22,0.8995973389355743) 66%, rgba(255,255,255,0.3029586834733894) 100%);
   position: absolute;
-  top: 59%;
+  top: 40%;
   width: 100%;
 }
 

@@ -8,7 +8,7 @@ const development = process.env.REACT_APP_DEVELOPMENT === false;
 function App() {
   return (
     <div className="App">
-      {development && <div><p>Em desenvolvimento</p></div>} 
+      {development && <div><p>Em desenvolvimento</p></div>}
       <StrangerThings />
     </div>
   );

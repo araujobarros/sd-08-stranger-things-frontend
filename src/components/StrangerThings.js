@@ -14,13 +14,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  HAWKINS_API_URL,
-  HAWKINS_TIMEOUT,
+  url: HAWKINS_API_URL,
+  timeout: HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  UPSIDEDOWN_API_URL,
-  UPSIDEDOWN_TIMEOUT,
+  url: UPSIDEDOWN_API_URL,
+  timeout: UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -121,6 +121,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
+          {/* <span>Em desenvolvimento</span> */}
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}

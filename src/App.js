@@ -3,7 +3,7 @@ import './App.css';
 
 import StrangerThings from './components/StrangerThings';
 
-const isDev = boolean(process.env.REACT_APP_DEVELOPMENT);
+const isDev = Boolean(process.env.REACT_APP_DEVELOPMENT);
 
 console.log(isDev);
 console.log(typeof (isDev));

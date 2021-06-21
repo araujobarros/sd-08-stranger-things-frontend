@@ -6,7 +6,7 @@ import StrangerThings from './components/StrangerThings';
 const isDev = process.env.REACT_APP_DEVELOPMENT;
 
 console.log(isDev);
-console.log(typeOf(isDev));
+console.log(typeof (isDev));
 
 function App() {
   return (

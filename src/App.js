@@ -3,7 +3,7 @@ import './App.css';
 
 import StrangerThings from './components/StrangerThings';
 
-const APP_DEVELOPMENT = true;
+const APP_DEVELOPMENT = false;
 
 function App() {
   return (

@@ -28,6 +28,7 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
+      environment: process.env.ENVIRONMENT,
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -38,6 +39,8 @@ class StrangerThings extends React.Component {
 
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
+
+    this.renderDevTag = this.renderDevTag.bind(this);
   }
 
   handleInput(event) {
@@ -103,6 +106,15 @@ class StrangerThings extends React.Component {
     );
   }
 
+  renderDevTag() {
+    const { environment } = this.state;
+    if (environment === 'true') {
+      return (
+        <div>Em desenvolvimento</div>
+      );
+    }
+  }
+
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
@@ -113,9 +125,9 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
-        <div>Em desenvolvimento</div>
         <div className="content strangerfy">
           <div className="change-reality">
+            {this.renderDevTag()}
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade

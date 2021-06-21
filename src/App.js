@@ -3,7 +3,7 @@ import './App.css';
 
 import StrangerThings from './components/StrangerThings';
 
-const APP_DEVELOPMENT = true;
+const development = process.env.REACT_APP_DEVELOMPENT === 'true';
 
 function App() {
   return (

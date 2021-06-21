@@ -1,3 +1,7 @@
+button, p, th, a, input {
+  font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
 .App {
   text-align: center;
 }
@@ -7,6 +11,28 @@
   pointer-events: none;
 }
 
+.development-container {
+  background: linear-gradient(90deg, rgba(255,255,255,0.30015756302521013) 0%, rgba(11,11,11,0.896796218487395) 33%, rgba(22,22,22,0.8995973389355743) 66%, rgba(255,255,255,0.3029586834733894) 100%);
+  position: absolute;
+  top: 59%;
+  width: 100%;
+}
+
+.development-img {
+  height: 220px;
+  margin: 0;
+  margin-top: -10px;
+}
+
+.development-tag {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0;
+  margin: -10px 0 10px;
+  text-shadow: 2px 2px 5px darkred;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,14 +40,14 @@
 }
 
 .App-header {
+  align-items: center;
   background-color: #282c34;
-  min-height: 100vh;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .App-link {
@@ -44,13 +70,11 @@
 .reality {
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 100%;
-
   display: flex;
+  height: 100%;
   justify-content: center;
-
   transition: background-position 2.5s, background-image 3s ease-in-out;
+  width: 100%;
   -webkit-transition: background-position 2.5s, background-image 3s ease-in-out;
 }
 
@@ -69,26 +93,38 @@
 }
 
 .content {
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 .strangerfy > div > * {
-  font-family: 'BenguiatITCW01-BoldCn';
-  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.eot')
-      format('embedded-opentype'),
-    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.woff')
-      format('woff'),
-    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.ttf')
-      format('truetype');
+  background: rgba(211, 211, 211, 0.637);
+  color: #c11b1f;
+  font-size: x-large;
   font-style: normal;
   font-weight: bold;
-
-  color: #c11b1f;
-  background: rgba(211, 211, 211, 0.637);
-
-  font-size: x-large;
-
   margin: 10px;
+}
+
+.strangerfy > div > td {
+font-family: 'BenguiatITCW01-BoldCn';
+src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.eot')
+    format('embedded-opentype'),
+  url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.woff')
+    format('woff'),
+  url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/161676/BenguiatProITC-BoldCond.ttf')
+    format('truetype');
+}
+
+.btn {
+  border: none;
+  box-shadow: 1px 1px 15px black;
+  padding: 3px 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: rgba(139, 0, 0, 0.9);
+  color: white;
 }
 
 .strangerfy > div > input {
@@ -96,6 +132,6 @@
 }
 
 .strangerfy > div > table {
-  width: 900px;
   text-align: left;
+  width: 900px;
 }

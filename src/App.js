@@ -3,10 +3,14 @@ import './App.css';
 
 import StrangerThings from './components/StrangerThings';
 
+const isDevelopment = process.env.REACT_APP_DEVELOPMENT;
+
 function App() {
   return (
     <div className="App">
-      <StrangerThings />
+      { isDevelopment
+        ? <div>Em desenvolvimento</div>
+        : <StrangerThings /> }
     </div>
   );
 }

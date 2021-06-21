@@ -108,6 +108,7 @@ class StrangerThings extends React.Component {
 
   renderDevTag() {
     const { environment } = this.state;
+    console.log(environment, process.env.ENVIRONMENT);
     if (environment === 'development') {
       return (
         <div>Em desenvolvimento</div>

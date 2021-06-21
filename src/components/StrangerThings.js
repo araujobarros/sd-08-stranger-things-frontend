@@ -28,7 +28,6 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
-      environment: process.env.ENVIRONMENT,
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -107,8 +106,7 @@ class StrangerThings extends React.Component {
   }
 
   renderDevTag() {
-    const { environment } = this.state;
-    console.log(environment, process.env.ENVIRONMENT);
+    const environment = process.env.NODE_ENV;
     if (environment === 'development') {
       return (
         <div>Em desenvolvimento</div>

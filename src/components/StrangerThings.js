@@ -104,7 +104,8 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    const inDev = process.env.REACT_APP_IN_DEV === 'false' ? '' : true;
+    const inDev = process.env.REACT_APP_IN_DEV === 'true' ? true : false;
+    console.log(inDev);
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
       <div
@@ -113,7 +114,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
-          { inDev && (<div className="under-development">Em desenvolvimento</div>) }
+          { inDev ? <div className="under-development">Em desenvolvimento</div> : '' }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}

@@ -99,3 +99,9 @@
   width: 900px;
   text-align: left;
 }
+
+.development {
+  background: rgba(211, 211, 211, 0.637);
+  color: blue;
+  font-size: x-large;
+}

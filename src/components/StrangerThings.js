@@ -8,12 +8,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
-  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
+  timeout: parseInt(process.env.REACT_APP_HAWKINS_TIMEOUT, 10),
 };
 
 const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDEDOWN_URL,
-  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
+  timeout: parseInt(process.env.REACT_APP_UPSIDEDOWN_TIMEOUT, 10),
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -104,9 +104,8 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    const {
-      hereIsTheUpsideDownWorld, characterName, characters, page,
-    } = this.state;
+    const inDev = process.env.REACT_APP_IN_DEV === 'false' ? 0 : 1;
+    const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (
       <div
         className={ `reality ${getRealityClass(
@@ -114,7 +113,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
-          { process.env.REACT_APP_IN_DEV && (<div className="under-development">Em desenvolvimento</div>) }
+          { inDev && (<div className="under-development">Em desenvolvimento</div>) }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}

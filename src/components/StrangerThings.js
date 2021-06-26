@@ -104,7 +104,7 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    const inDev = process.env.REACT_APP_IN_DEV === 'true' ? true : false;
+    const inDev = process.env.REACT_APP_IN_DEV === 'true' ? 1 : 0;
     console.log(inDev);
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
     return (

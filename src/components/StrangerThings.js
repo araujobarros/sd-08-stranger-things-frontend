@@ -2,18 +2,20 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
+require('dotenv').config({ path: '../../.env' });
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
 const strangerThingsConfig = {
-  url: 'https://itoclick-bk.herokuapp.com/',
-  timeout: 30000,
+  url: REACT_APP_HAWKINS_URL,
+  timeout: +REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: 'https://itoclick-bd.herokuapp.com/',
-  timeout: 30000,
+  url: REACT_APP_UPSIDEDOWN_URL,
+  timeout: +REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);

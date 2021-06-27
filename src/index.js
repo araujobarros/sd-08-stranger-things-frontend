@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-require('dotenv').setings({ path: '../.env' });
+// require('dotenv').setings({ path: '../.env' });
 
 ReactDOM.render(
   <React.StrictMode>

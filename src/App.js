@@ -3,8 +3,6 @@ import './App.css';
 
 import StrangerThings from './components/StrangerThings';
 
-require('dotenv').setings({ path: '../.env' });
-
 function App() {
   return (
     <div className="App">

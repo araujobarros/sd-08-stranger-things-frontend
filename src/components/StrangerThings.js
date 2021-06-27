@@ -1,5 +1,5 @@
 import React from 'react';
-import dotenv from 'dotenv/config';
+import dotenv from 'dotenv';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
@@ -7,7 +7,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
-dotenv();
+dotenv.config();
 
 const {
   REACT_APP_HAWKINS_URL,

@@ -2,8 +2,9 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
-const getRealityClass = (hereIsTheUpsideDownWorld) =>
-  hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things';
+const getRealityClass = (hereIsTheUpsideDownWorld) => (
+  hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
+);
 
 const strangerThingsConfig = {
   url: process.env.STRANGER_THINGS_URL,
@@ -39,10 +40,9 @@ class StrangerThings extends React.Component {
     this.previousPage = this.previousPage.bind(this);
   }
 
-  handleInput({ target }) {
-    const { value } = target;
+  handleInput(event) {
     this.setState({
-      characterName: value,
+      characterName: event.target.value,
     });
   }
 
@@ -59,7 +59,7 @@ class StrangerThings extends React.Component {
       {
         page: 1,
       },
-      this.searchCharacter(1)
+      this.searchCharacter(1),
     );
   }
 
@@ -87,7 +87,7 @@ class StrangerThings extends React.Component {
       {
         page: page + 1,
       },
-      () => this.searchCharacter()
+      () => this.searchCharacter(),
     );
   }
 
@@ -99,18 +99,23 @@ class StrangerThings extends React.Component {
       {
         page: page - 1,
       },
-      () => this.searchCharacter()
+      () => this.searchCharacter(),
     );
   }
 
   render() {
-    const { hereIsTheUpsideDownWorld, characterName, characters, page } =
-      this.state;
+    const {
+      hereIsTheUpsideDownWorld, characterName, characters, page,
+    } = this.state;
     return (
-      <div className={`reality ${getRealityClass(hereIsTheUpsideDownWorld)}`}>
-        <div className='content strangerfy'>
-          <div className='change-reality'>
-            <button type='button' onClick={this.changeRealityClick}>
+      <div
+        className={ `reality ${getRealityClass(
+          hereIsTheUpsideDownWorld,
+        )}` }
+      >
+        <div className="content strangerfy">
+          <div className="change-reality">
+            <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade
             </button>
@@ -118,17 +123,15 @@ class StrangerThings extends React.Component {
 
           <div>
             <input
-              placeholder='Nome do Personagem'
-              onChange={this.handleInput}
-              value={characterName}
+              placeholder="Nome do Personagem"
+              onChange={ this.handleInput }
+              value={ characterName }
             />
-            <button type='button' onClick={this.searchClick}>
-              Pesquisar
-            </button>
+            <button type="button" onClick={ this.searchClick }>Pesquisar</button>
           </div>
 
           <div>
-            <Table characters={characters} />
+            <Table characters={ characters } />
           </div>
 
           <div>
@@ -138,12 +141,8 @@ class StrangerThings extends React.Component {
             </p>
           </div>
           <div>
-            <button type='button' onClick={this.previousPage}>
-              Anterior
-            </button>
-            <button type='button' onClick={this.nextPage}>
-              Próximo
-            </button>
+            <button type="button" onClick={ this.previousPage }>Anterior</button>
+            <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
         </div>
       </div>

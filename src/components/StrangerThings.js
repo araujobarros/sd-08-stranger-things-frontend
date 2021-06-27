@@ -2,6 +2,7 @@ import React from 'react';
 import dotenv from 'dotenv';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
+import { currentEnvironment, environmentTypes } from '../config/environments';
 
 dotenv.config();
 
@@ -116,6 +117,7 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
+        {currentEnvironment === environmentTypes.DEVELOPMENT && <p>Em desenvolvimento</p>}
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>

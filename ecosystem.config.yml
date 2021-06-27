@@ -1,0 +1,3 @@
+apps:
+  - name: front
+    script: ./index.js

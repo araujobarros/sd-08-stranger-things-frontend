@@ -9,12 +9,13 @@
     "axios": "0.19.2",
     "dotenv": "8.2.0",
     "eslint-config-trybe-frontend": "1.1.0",
+    "pm2": "^5.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "pm2-runtime start ecosystem.config.yml",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

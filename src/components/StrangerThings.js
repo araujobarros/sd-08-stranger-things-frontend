@@ -7,12 +7,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'http://meianelli-bk.herokuapp.com/',
+  url: 'http://localhost:3002',
   timeout: 30000,
 };
 
 const upsideDownConfig = {
-  url: 'http://meianelli-bd.herokuapp.com/',
+  url: 'http://localhost:3003',
   timeout: 30000,
 };
 

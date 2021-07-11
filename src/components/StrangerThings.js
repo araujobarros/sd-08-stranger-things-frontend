@@ -9,7 +9,7 @@ const urlHawkins = process.env.REACT_APP_HAWKINS_URL;
 const timeoutHawkins = Number(process.env.REACT_APP_HAWKINS_TIMEOUT);
 const urlUpsidedown = process.env.REACT_APP_UPSIDEDOWN_URL;
 const timeoutUpsidedown = Number(process.env.REACT_APP_UPSIDEDOWN_TIMEOUT);
-// FIM
+// FIM.
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'

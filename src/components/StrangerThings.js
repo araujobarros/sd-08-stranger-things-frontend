@@ -1,15 +1,16 @@
 import React from 'react';
+import dotenv from 'dotenv';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
 // REQ
-require('dotenv').config();
+dotenv.config();
 
 const urlHawkins = process.env.REACT_APP_HAWKINS_URL;
 const timeoutHawkins = Number(process.env.REACT_APP_HAWKINS_TIMEOUT);
 const urlUpsidedown = process.env.REACT_APP_UPSIDEDOWN_URL;
 const timeoutUpsidedown = Number(process.env.REACT_APP_UPSIDEDOWN_TIMEOUT);
-// FIM.
+// FIM
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'

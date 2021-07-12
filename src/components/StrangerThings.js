@@ -2,6 +2,8 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
+require('dotenv').config();
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -113,7 +115,7 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
-        <p>Em desenvolvimento</p>
+        { process.env.ENVIROMENT === 'development' && <div>Em desenvolvimento</div> }
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>

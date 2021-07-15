@@ -8,6 +8,7 @@ const appInDevelopment = process.env.REACT_APP_DEVELOPMENT === 'false';
 function App() {
   return (
     <div className="App">
+      { appInDevelopment }
       <StrangerThings />
     </div>
   );
